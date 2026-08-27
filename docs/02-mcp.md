@@ -23,28 +23,28 @@
 ## 2-1. データ探索コレクションを追加する
 
 1. `Ctrl+Shift+P` を押します。
-2. **MCP: Add Server** を選択します。
-3. **HTTP (HTTP or Server-Sent Events)** を選択します。
+2. **MCP: Add Server** を選択します。<img width="908" height="421" alt="image" src="https://github.com/user-attachments/assets/1c39fb04-6a92-41da-a4df-3c8b490ce534" />
+
+3. **HTTP (HTTP or Server-Sent Events)** を選択します。<img width="904" height="319" alt="image" src="https://github.com/user-attachments/assets/546ffdd8-9f23-49fa-b805-a2598c875c48" />
+
 4. 次の URL を入力します。大文字と小文字を変えないでください。
 
 ```text
 https://sentinel.microsoft.com/mcp/data-exploration
 ```
 
-5. Server ID に `sentinel-data-exploration` と入力します。
-6. **Workspace** を選びます。
-7. 信頼を求められたら、URL が `https://sentinel.microsoft.com/` であることを確認して許可します。
+<img width="912" height="141" alt="image" src="https://github.com/user-attachments/assets/130ada2f-c431-43e1-9a32-402da6f64d36" />
+
+5. Server ID に `sentinel-data-exploration` と入力します。<img width="908" height="145" alt="image" src="https://github.com/user-attachments/assets/195f1085-1202-4e84-bf73-d8e7539b5f41" />
+
+6. **Workspace** を選びます。<img width="892" height="166" alt="image" src="https://github.com/user-attachments/assets/25712215-0660-4d41-988c-ba562d966f59" />
+
+7. 信頼を求められたら、URL が `https://sentinel.microsoft.com/` であることを確認して許可します。<img width="810" height="190" alt="image" src="https://github.com/user-attachments/assets/00e115b9-cda7-47b0-8416-6ec533a6241f" />
+
 8. 演習対象テナントのアカウントで認証します。
 
-> [!TIP]
-> **画面ショット差し替え枠 `SS-04`:** MCP: Add Server で HTTP を選択する画面。
+<img width="903" height="269" alt="image" src="https://github.com/user-attachments/assets/bb216b7d-a00b-4bd8-92e7-b4c66b097882" />
 
-![SS-04 差し替え用ダミー: MCP: Add Server で HTTP を選択](../assets/screenshots/ss-04-mcp-http.png)
-
-> [!TIP]
-> **画面ショット差し替え枠 `SS-05`:** Microsoft の認証後、MCP サーバーが Running になった画面。テナント名以外の個人情報はマスクします。
-
-![SS-05 差し替え用ダミー: MCP サーバーが Running](../assets/screenshots/ss-05-mcp-running.png)
 
 ## 2-2. エージェント作成コレクションを追加する
 
@@ -61,6 +61,8 @@ Scope: Workspace
 > [!CAUTION]
 > 生成された `mcp.json` にアクセストークンを追記しないでください。認証は VS Code の認証フローに任せます。
 
+<img width="1141" height="682" alt="image" src="https://github.com/user-attachments/assets/ff6cb86c-67c7-4d42-be58-fb9f9ba6fcb9" />
+
 ## 2-3. ツールを確認する
 
 1. **View > Chat** を開きます。
@@ -69,10 +71,7 @@ Scope: Workspace
 4. `sentinel-data-exploration` のデータ探索ツールが見えることを確認します。
 5. `security-copilot-agent-creation` にエージェント作成用ツールが見えることを確認します。
 
-> [!TIP]
-> **画面ショット差し替え枠 `SS-06`:** 2 コレクションと配下のツールが展開されたツール一覧。
-
-![SS-06 差し替え用ダミー: 2 コレクションのツール一覧](../assets/screenshots/ss-06-mcp-tools.png)
+<img width="897" height="110" alt="image" src="https://github.com/user-attachments/assets/3695501f-b1b8-4015-a907-9a27132dfa44" />
 
 ## 2-4. テーブルを検索する
 
@@ -84,6 +83,9 @@ Microsoft Sentinel で過去 24 時間のサインイン失敗を調べるため
 ```
 
 **期待結果:** MCP ツールが呼び出され、テナントで利用可能なテーブル候補が返ります。候補は環境によって異なります。
+
+<img width="1403" height="759" alt="image" src="https://github.com/user-attachments/assets/7bccabe4-fa34-4004-bc3e-0e28f834a64c" />
+
 
 次に、候補の 1 つを指定して少量だけ確認します。
 
