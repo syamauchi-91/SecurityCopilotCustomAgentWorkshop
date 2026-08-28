@@ -17,7 +17,7 @@
 ## 1-2. 拡張機能をインストールする
 
 1. 左側の **Extensions** を選択します。
-2. `GitHub Copilot` を検索し、発行元が **GitHub** であることを確認してインストールします。
+2. `GitHub Copilot Chat` を検索し、発行元が **GitHub** であることを確認してインストールします。
 3. `Microsoft Sentinel` を検索し、発行元が **Microsoft** であることを確認してインストールします。
 4. 要求された場合は VS Code を再読み込みします。
 
