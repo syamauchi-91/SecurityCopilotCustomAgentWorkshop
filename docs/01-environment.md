@@ -10,10 +10,7 @@
 3. VS Code を起動し、**Help > About** でバージョンを記録します。
 4. 更新が表示された場合は適用して再起動します。
 
-> [!TIP]
-> **画面ショット差し替え枠 `SS-01`:** VS Code の About 画面。バージョンだけを表示し、ユーザー名や端末名はマスクします。
-
-![SS-01 差し替え用ダミー: VS Code の About 画面](../assets/screenshots/ss-01-vscode-about.png)
+<img width="2496" height="1592" alt="スクリーンショット 2026-08-24 224434" src="https://github.com/user-attachments/assets/08e30063-f2a9-44e5-b634-9a2a2d501fc5" />
 
 **期待結果:** VS Code が起動し、コマンドパレットを `Ctrl+Shift+P` で開けます。
 
@@ -27,10 +24,8 @@
 > [!NOTE]
 > 拡張機能の名称や同梱関係は更新されることがあります。似た名前の第三者製拡張機能ではなく、発行元を確認してください。
 
-> [!TIP]
-> **画面ショット差し替え枠 `SS-02`:** Extensions ビューで GitHub Copilot と Microsoft Sentinel が Installed になった状態。
-
-![SS-02 差し替え用ダミー: 必須拡張機能が Installed になった状態](../assets/screenshots/ss-02-extensions.png)
+<img width="2496" height="1592" alt="image" src="https://github.com/user-attachments/assets/b4de39de-5641-4775-b006-48db65f51b42" />
+<img width="2496" height="1592" alt="image" src="https://github.com/user-attachments/assets/1a26fc2d-d3db-417d-8f1b-d99a2b18fbbd" />
 
 ## 1-3. GitHub Copilot にサインインする
 
@@ -67,14 +62,16 @@
 ```
 
 4. `mcp.json` の上部に **Start** が表示された場合は選択します。確認ダイアログが表示された場合は、このワークスペースを信頼できることを確認してサーバーを有効にします。
+<img width="868" height="387" alt="image" src="https://github.com/user-attachments/assets/25a33649-03a7-4e2c-aa0c-9b5291bc3f9c" />
+<img width="866" height="348" alt="image" src="https://github.com/user-attachments/assets/e59a679d-34ac-4920-b5e5-6c731481927e" />
+
 5. Copilot Chat を **Agent** モードにします。
 6. **Tools** アイコンを開き、`microsoft` または `docs` で検索します。
 7. Microsoft Learn のドキュメント検索、記事取得、コードサンプル検索に対応するツールが有効になっていることを確認します。
 
-> [!TIP]
-> **画面ショット差し替え枠 `SS-12`:** Copilot Chat の Tools 一覧で Microsoft Learn のツールが有効になっている状態。
+<img width="723" height="227" alt="image" src="https://github.com/user-attachments/assets/1a877cd2-0fe4-4bba-a783-731ee0e5a174" />
+<img width="913" height="561" alt="image" src="https://github.com/user-attachments/assets/24d7eb6e-cfc6-4452-84fa-229d22940734" />
 
-![SS-12 差し替え用ダミー: Microsoft Learn MCP ツールが有効な状態](../assets/screenshots/ss-12-learn-mcp-tools.png)
 
 ### 接続を確認する
 
@@ -84,7 +81,8 @@ Copilot Chat に次のプロンプトを送ります。ツールの実行確認�
 Microsoft Learn MCP Server を使って、Microsoft Security Copilot の概要を公式ドキュメントから検索してください。参照したページのタイトルと URL も示してください。
 ```
 
-**期待結果:** Microsoft Learn の検索ツールが呼び出され、公式ページのタイトル、概要、URL が返ります。
+<img width="1424" height="962" alt="image" src="https://github.com/user-attachments/assets/e9aae86a-6212-480a-b68c-3325151dba8c" />
+
 
 うまく動かない場合は、次を確認します。
 
@@ -150,10 +148,7 @@ Security Copilot custom plugins builder/Builder
 4. ルートに `SKILL.md`、`references`、`output` があることを確認します。
 5. `SKILL.md` とリポジトリの MIT License を読み、組織の利用ルールに合うことを確認します。
 
-> [!TIP]
-> **画面ショット差し替え枠 `SS-03`:** Builder フォルダーを開いた Explorer。`SKILL.md`、`references`、`output` が見える状態。
-
-![SS-03 差し替え用ダミー: Builder のフォルダー構成](../assets/screenshots/ss-03-builder-folder.png)
+<img width="656" height="804" alt="image" src="https://github.com/user-attachments/assets/da25f3fb-e294-41c2-a5c1-c5d3911ff0a5" />
 
 ## 1-6. Builder の応答を確認する
 
@@ -162,6 +157,8 @@ Copilot Chat を **Agent** モードにし、次を送ります。この時点�
 ```text
 Security Copilot の KQL プラグインを作るときに、確認すべき要件だけを質問してください。まだ YAML は生成しないでください。
 ```
+
+<img width="1349" height="615" alt="image" src="https://github.com/user-attachments/assets/b7ade122-1c84-4105-8fc2-0a5408403838" />
 
 **期待結果:** 対象（Defender/Sentinel など）、目的、入力、認証、時間範囲などの確認が返ります。
 

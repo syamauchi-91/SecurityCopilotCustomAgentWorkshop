@@ -71,10 +71,11 @@ Microsoft Sentinel のインシデントを調査する対話型 Security Copilo
 4. **Chat with agent** を開きます。
 5. 講師から渡された演習用インシデント番号でスタータープロンプトを実行します。
 
-> [!TIP]
-> **画面ショット差し替え枠 `SS-09`:** 対話型エージェントのスタータープロンプト画面。実インシデント情報は写さない。
+<img width="877" height="251" alt="image" src="https://github.com/user-attachments/assets/6bb1424f-9552-42b5-86be-603cb88dd9c7" />
+<img width="2464" height="646" alt="image" src="https://github.com/user-attachments/assets/3ae55fed-16ec-43fc-8e27-93c6629c3684" />
 
-![SS-09 差し替え用ダミー: 対話型エージェントのスタータープロンプト](../assets/screenshots/ss-09-starter-prompts.png)
+<img width="2479" height="881" alt="image" src="https://github.com/user-attachments/assets/19305905-8258-45c0-b84a-26f14bbf812d" />
+
 
 ## 5-6. 結果を評価する
 

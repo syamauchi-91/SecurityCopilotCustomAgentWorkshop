@@ -30,6 +30,9 @@ Security Copilot KQL プラグインを作成してください。
 
 Copilot が質問した場合は、対象を `Defender`、時間範囲を `24h`、件数を `50` と答えます。
 
+<img width="1331" height="349" alt="image" src="https://github.com/user-attachments/assets/45af1c81-91cd-4873-9265-46c7cf551f47" />
+
+
 ## 3-2. スキーマをレビューする
 
 生成前に、次を確認します。
@@ -39,6 +42,9 @@ Copilot が質問した場合は、対象を `Defender`、時間範囲を `24h`�
 - ユーザー ID、IP アドレスなど必要最小限の列だけを使う
 - `ago(24h)` 相当の時間条件がある
 - `top 50` または同等の上限がある
+
+<img width="1330" height="430" alt="image" src="https://github.com/user-attachments/assets/3c176d77-af57-4831-88bf-803de7740c77" />
+
 
 演習用の開始例は [defender-signin-failures.yaml](../samples/defender-signin-failures.yaml) です。列名が実環境と違う場合は、必ず MCP の結果を優先して修正します。
 
@@ -58,27 +64,33 @@ SkillGroups
 
 `Descriptor.Name` と `Skills.Name` に空白やピリオドを入れません。説明には「いつ呼ぶか」「何を返すか」を具体的に書きます。
 
+<img width="1172" height="886" alt="image" src="https://github.com/user-attachments/assets/c5c79297-08b6-44c4-aa2f-4379e4f50ea9" />
+
 ## 3-4. Security Copilot にアップロードする
 
 1. [Microsoft Security Copilot](https://securitycopilot.microsoft.com/) を開きます。
-2. プロンプトバーの **Sources** を選択します。
+2. プロンプトバーの **Sources** を選択します。<img width="2496" height="1592" alt="image" src="https://github.com/user-attachments/assets/531c4033-2b9c-466c-98e9-f0fab856e235" />
+
 3. **Manage plugins > Custom > Upload plugin** を選択します。
+<img width="2496" height="1592" alt="image" src="https://github.com/user-attachments/assets/e168a1aa-24ec-4cdf-b84b-9735e3b618d1" />
+<img width="2496" height="1592" alt="image" src="https://github.com/user-attachments/assets/5a7926db-196d-47e4-9fa0-920bcbbec529" />
+
 4. 自分だけで試す場合は個人スコープを選びます。
 5. 生成した YAML をアップロードします。
+<img width="2496" height="1592" alt="image" src="https://github.com/user-attachments/assets/9b661d91-318d-45fa-9b10-d1e96eee5eb8" />
+<img width="2496" height="1592" alt="image" src="https://github.com/user-attachments/assets/9b4a7da7-1e17-4ec7-8f34-64c24299d3a8" />
+<img width="2496" height="1592" alt="image" src="https://github.com/user-attachments/assets/5f7df603-740d-4b9d-8705-12ad99aecee1" />
+
 6. エラーが出た場合は行番号とフィールド名を控え、Copilot にエラー全文と YAML を渡して修正します。
 7. プラグインを有効にします。
-
-> [!TIP]
-> **画面ショット差し替え枠 `SS-07`:** Manage plugins の Custom と Upload plugin。
-
-![SS-07 差し替え用ダミー: Security Copilot へのプラグインアップロード](../assets/screenshots/ss-07-upload-plugin.png)
+<img width="863" height="283" alt="image" src="https://github.com/user-attachments/assets/bccadd07-4e59-463f-91e1-78ec248e55c9" />
 
 ## 3-5. 正常系と異常系をテストする
 
 正常系:
 
 ```text
-Defender Sign-in Failure Workshop を使って、直近 24 時間のサインイン失敗を最大 50 件取得してください。
+Defender Sign-in Failure プラグインを使って、直近 24 時間のサインイン失敗を最大 50 件取得してください。
 ```
 
 確認項目:
@@ -87,6 +99,8 @@ Defender Sign-in Failure Workshop を使って、直近 24 時間のサインイ
 - [ ] 24 時間より前のデータがない
 - [ ] 50 件を超えない
 - [ ] 指定外の列が返らない
+
+<img width="1899" height="780" alt="image" src="https://github.com/user-attachments/assets/f630cdf7-e9eb-4690-a9a0-afcf306f4c5b" />
 
 異常系として、該当データがない期間または演習テナントで実行し、「0 件」をエラー扱いせず説明できることを確認します。
 
