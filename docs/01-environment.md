@@ -148,10 +148,7 @@ Security Copilot custom plugins builder/Builder
 4. ルートに `SKILL.md`、`references`、`output` があることを確認します。
 5. `SKILL.md` とリポジトリの MIT License を読み、組織の利用ルールに合うことを確認します。
 
-> [!TIP]
-> **画面ショット差し替え枠 `SS-03`:** Builder フォルダーを開いた Explorer。`SKILL.md`、`references`、`output` が見える状態。
-
-![SS-03 差し替え用ダミー: Builder のフォルダー構成](../assets/screenshots/ss-03-builder-folder.png)
+<img width="656" height="804" alt="image" src="https://github.com/user-attachments/assets/da25f3fb-e294-41c2-a5c1-c5d3911ff0a5" />
 
 ## 1-6. Builder の応答を確認する
 
@@ -160,6 +157,8 @@ Copilot Chat を **Agent** モードにし、次を送ります。この時点�
 ```text
 Security Copilot の KQL プラグインを作るときに、確認すべき要件だけを質問してください。まだ YAML は生成しないでください。
 ```
+
+<img width="1349" height="615" alt="image" src="https://github.com/user-attachments/assets/b7ade122-1c84-4105-8fc2-0a5408403838" />
 
 **期待結果:** 対象（Defender/Sentinel など）、目的、入力、認証、時間範囲などの確認が返ります。
 
