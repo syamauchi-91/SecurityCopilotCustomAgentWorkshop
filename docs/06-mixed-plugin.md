@@ -37,6 +37,8 @@ KQL+GPT 混合 Security Copilot プラグインを作成してください。
 - 自動連鎖はせず、2 スキルを個別にテストできるようにする
 ```
 
+<img width="879" height="238" alt="image" src="https://github.com/user-attachments/assets/b46e77d7-102d-4231-8235-91faa09dd0fd" />
+
 開始例は [mixed-incident-toolkit.yaml](../samples/mixed-incident-toolkit.yaml) です。
 
 ## 6-3. 2 段階でテストする
@@ -49,14 +51,19 @@ KQL+GPT 混合 Security Copilot プラグインを作成してください。
 テストプロンプト:
 
 ```text
-Incident Investigation Toolkit Workshop の GetRecentIncidents を実行してください。
+Incident Investigation Toolkit プラグインの GetRecentIncidents を実行してください。
 結果は加工せず、最大 10 件の表で示してください。
 ```
 
+<img width="1902" height="804" alt="image" src="https://github.com/user-attachments/assets/8437c738-9eb1-42f9-be0c-e6ada7d8788f" />
+
 ```text
-Incident Investigation Toolkit Workshop の SummarizeIncidents を使い、以下のデータだけを根拠に日本語で要約してください。
+Incident Investigation Toolkit プラグインの SummarizeIncidents を使い、以下のデータだけを根拠に日本語で要約してください。
 <直前の KQL 結果>
 ```
+
+<img width="1923" height="1110" alt="image" src="https://github.com/user-attachments/assets/deec63f3-eb7c-4455-824a-8ee4b39af646" />
+
 
 ## 6-4. 失敗例から改善する
 
