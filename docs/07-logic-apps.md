@@ -25,13 +25,15 @@ flowchart LR
     G --> H[Return status]
 ```
 
-カスタムエージェントの分析ロジックと、メール送信という副作用を分けます。エージェントの出力を無条件に送信しません。
+カスタムエージェントの分析ロジックと、メール送信という処理を分けます。エージェントの出力を無条件に送信しません。
 
 ## 7-2. Logic App を作る
 
 1. Azure portal で演習用リソースグループを選びます。
 2. **Logic App (Consumption)** を作成します。
 3. Designer で **When an HTTP request is received** トリガーを追加します。
+<img width="2478" height="708" alt="image" src="https://github.com/user-attachments/assets/c0da5eaf-7e49-465e-bc2d-99dc7b3da1b9" />
+
 4. Request Body JSON Schema に次を設定します。
 
 ```json
@@ -49,25 +51,30 @@ flowchart LR
 }
 ```
 
+<img width="2479" height="1126" alt="image" src="https://github.com/user-attachments/assets/899900e9-c6e1-4162-ba48-cdea26adb4db" />
+
 5. Condition を追加し、`sendApproved` が `true` の場合だけ後続処理へ進めます。
 6. false 側は **Terminate** で `Cancelled` を返します。
 7. true 側で入力の長さと値を再確認します。
 
-> [!TIP]
-> **画面ショット差し替え枠 `SS-10`:** HTTP trigger と sendApproved Condition が見える Designer。
-
-![SS-10 差し替え用ダミー: Logic App の HTTP trigger と承認 Condition](../assets/screenshots/ss-10-logicapp-trigger.png)
+<img width="2479" height="1071" alt="image" src="https://github.com/user-attachments/assets/cfa42f29-44bd-4b5d-986e-ce066132536a" />
 
 ## 7-3. HTML/CSS レポートを組み立てる
 
 [report-template.html](../samples/report-template.html) をデザインの開始例として使います。
 
-1. **Compose** アクションを追加します。
+1. true 側で **Compose** アクションを追加します。
 2. テンプレートのプレースホルダーへ Designer の動的コンテンツを割り当てます。
+<img width="2463" height="1396" alt="image" src="https://github.com/user-attachments/assets/986c4d98-5a67-4d26-9828-f9886062ae15" />
+
 3. `summary` や `nextActions` を HTML として実行せず、`&`, `<`, `>` をエスケープしたプレーンテキストとして扱います。
 4. 外部 JavaScript、外部画像、追跡ピクセルを追加しません。
-5. メールコネクタの宛先を講師指定のテスト用メールボックスに固定します。
-6. Subject は `[Workshop][<severity>] Sentinel incident <incidentNumber>` とします。
+5. メールの送信 (V2) アクション (Office 365 Outlook) を追加します。
+6. メールコネクタの宛先を講師指定のテスト用メールボックスに固定します。
+7. Subject は `[Workshop][<severity>] Sentinel incident <incidentNumber>` とします。
+8. Body には Compose アクションの Outputs (出力) を設定します。
+
+<img width="2480" height="1258" alt="image" src="https://github.com/user-attachments/assets/0849c925-57e6-4e5c-8436-4d6358b887c9" />
 
 > [!CAUTION]
 > 受講者が宛先を自由入力できる設計にしないでください。演習中は配布リストや実運用宛先を使いません。
@@ -83,12 +90,14 @@ flowchart LR
 
 これらを設定値にすることで、リポジトリへ環境固有 ID を直接書かずに済みます。Logic App と Security Copilot は同じテナントに存在する必要があります。
 
+<img width="894" height="228" alt="image" src="https://github.com/user-attachments/assets/1000d90f-575a-4924-aea5-bde7f4c2d67a" />
+
 ## 7-5. 送信前確認をテストする
 
 最初に `sendApproved: false` で実行します。
 
 ```text
-Send Incident Workshop Report を使い、sendApproved は false のまま、演習インシデントのレポート送信を試してください。
+Workshop Logic App Incident Report を使い、sendApproved は false のまま、演習インシデントのレポート送信を試してください。
 ```
 
 **期待結果:** Logic App の実行は記録されますが、メールは送信されません。
@@ -97,7 +106,7 @@ Send Incident Workshop Report を使い、sendApproved は false のまま、演
 
 ```text
 送信先が講師指定のテストメールボックスであることを確認しました。
-Send Incident Workshop Report を使い、sendApproved=true で次の演習データを送信してください: <サニタイズ済みデータ>
+Workshop Logic App Incident Report を使い、sendApproved=true で次の演習データを送信してください: <サニタイズ済みデータ>
 ```
 
 > [!TIP]
