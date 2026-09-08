@@ -56,10 +56,12 @@ VS Code と GitHub Copilot を使って、Microsoft Sentinel のデータを確�
 | 事前準備 | アカウント、ロール、製品アクセスの確認 | 開催前 30 分 |
 | Lab 0-1 | 環境構築と MCP 接続 | 45 分 |
 | Lab 2-5 | 4 種類のプラグイン/エージェント作成 | 120 分 |
-| Lab 6-7 | Logic Apps、チューニング、制約 | 45 分 |
+| Lab 6-7 | KQL + GPT、Logic Apps | 65 分 |
+| Lab 8 | チューニングと制約 | 20 分 |
+| Lab 9 | ローカル指示書からの総合演習 | 45 分 |
 | まとめ | 成果確認とクリーンアップ | 15 分 |
 
-合計は約 3 時間 45 分です。API キーの発行や Azure リソースの準備時間は含みません。
+合計は約 5 時間 10 分です。API キーの発行や Azure リソースの準備時間は含みません。
 
 ## 必要なもの
 
@@ -98,6 +100,7 @@ VS Code と GitHub Copilot を使って、Microsoft Sentinel のデータを確�
 7. [Lab 6: KQL + GPT インシデント調査ツールキット](docs/06-mixed-plugin.md)
 8. [Lab 7: Logic Apps HTML/CSS レポート通知](docs/07-logic-apps.md)
 9. [Lab 8: チューニングと制約](docs/08-tuning-limitations.md)
+10. [Lab 9: ローカル指示書から週次 Defender レポートエージェントを作成](docs/09-local-instruction-agent.md)
 
 講師は [講師ガイド](instructor-guide.md)、公開前の根拠確認には [参考資料](references.md)、撮影担当者は [画面ショット管理](assets/README.md) を使用してください。
 
